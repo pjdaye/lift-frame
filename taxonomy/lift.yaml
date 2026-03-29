@@ -1,0 +1,63 @@
+name: LIFT
+subtitle: "A Lifecycle-Anchored Fault & Threat Taxonomy for AI-Enabled Systems"
+version: "0.1.0"
+
+frame:
+  name: FRAME
+  definition: >
+    Bounded correctness: a system is correct if it produces an outcome within an allowed set
+    under stated constraints and can provide evidence that the constraints were met.
+  patterns:
+    - invariants
+    - envelopes
+    - liveness
+    - evidence
+
+axes:
+  lifecycle_layers:
+    - id: L0
+      name: "Policy & Instruction Boundary"
+      evidence: [policy_version, prompt_template_version]
+    - id: L1
+      name: "Context Assembly & Retrieval (RAG)"
+      evidence: [retrieved_doc_ids, index_version, last_refresh_timestamp]
+    - id: L2
+      name: "Planning, Control, and Adversarial Cognition"
+      evidence: [plan_trace_optional, tool_trace_optional]
+    - id: L2C
+      name: "Inter-Agent Trust & Composition"
+      evidence: [handoff_provenance, policy_enforcement_points]
+    - id: L3
+      name: "Tools & Execution Boundary"
+      evidence: [tool_call_logs, tool_registry_versions]
+    - id: L4
+      name: "Output & Information Release"
+      evidence: [citations, claim_to_evidence_optional]
+    - id: L5A
+      name: "Observability, Drift, and Governance"
+      evidence: [replay_package, version_pinning]
+    - id: L5B
+      name: "Abuse & Adversarial Operations"
+      evidence: [abuse_telemetry, session_integrity_events]
+
+  attack_pattern_classes:
+    - Extraction_Exfiltration
+    - Instruction_Injection
+    - Access_Escalation
+    - Resource_Abuse
+    - Trust_Manipulation
+    - Supply_Chain_Poisoning
+
+  state_scope: [Stateless, Session, CrossSession, SystemState]
+
+  economic_exploitability:
+    - Cost_Asymmetry
+    - Pricing_Loopholes
+    - Incentive_Misalignment
+    - Quota_Gaming
+
+scenario_overlay:
+  compositional_required: true
+  examples:
+    - "Trust → injection → extraction"
+    - "Poisoning → synthesis → exfiltration"

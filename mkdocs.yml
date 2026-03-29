@@ -1,0 +1,29 @@
+site_name: LIFT + FRAME
+repo_url: https://github.com/<YOUR_GITHUB_USERNAME>/lift-frame
+repo_name: <YOUR_GITHUB_USERNAME>/lift-frame
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - toc.follow
+    - search.highlight
+    - search.suggest
+
+nav:
+  - Home: index.md
+  - FRAME:
+      - Overview: frame/index.md
+      - Bounded Correctness: frame/bounded-correctness.md
+      - Oracle-first: frame/oracle-first.md
+  - LIFT:
+      - Overview: lift/index.md
+      - Lifecycle Layers: lift/lifecycle-layers.md
+      - Cross-cutting Axes: lift/crosscut-axes.md
+      - Tagging Recipe: lift/tagging-recipe.md
+      - Scenarios: lift/scenarios.md
+      - Reason Codes: lift/reason-codes.md
+      - Eval Packs: lift/eval-packs.md
+  - References:
+      - Reading List: references/reading-list.md

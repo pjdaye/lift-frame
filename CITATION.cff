@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use LIFT + FRAME in your work, please cite it."
+title: "LIFT + FRAME"
+type: software
+authors:
+  - family-names: Daye
+    given-names: Philip
+repository-code: "https://github.com/<YOUR_GITHUB_USERNAME>/lift-frame"
+license: "Apache-2.0 AND CC-BY-4.0"

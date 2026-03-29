@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "name",
+    "subtitle",
+    "version",
+    "axes"
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "axes": {
+      "type": "object",
+      "required": [
+        "lifecycle_layers",
+        "attack_pattern_classes",
+        "state_scope",
+        "economic_exploitability"
+      ],
+      "properties": {
+        "lifecycle_layers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "attack_pattern_classes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "state_scope": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "economic_exploitability": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
