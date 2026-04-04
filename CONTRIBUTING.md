@@ -3,6 +3,7 @@
 Thanks for your interest in improving **LIFT + FRAME**.
 
 ## How to contribute
+
 1. Open an issue describing the proposed change.
 2. Submit a PR that:
    - Updates the relevant docs in `docs/`
@@ -10,6 +11,7 @@ Thanks for your interest in improving **LIFT + FRAME**.
    - Updates `CHANGELOG.md` when appropriate
 
 ## Style guidelines
+
 - Prefer **clear, testable language**.
 - Keep “rules” in **invariants / envelopes / liveness / evidence** form.
 - When adding new taxonomy items, include:
@@ -19,7 +21,9 @@ Thanks for your interest in improving **LIFT + FRAME**.
   - Example test ideas (optional)
 
 ## Development
+
 Run locally:
+
 ```bash
 pip install -r requirements.txt
 mkdocs serve

@@ -1,6 +1,7 @@
 # Evaluation packs (Canary + Generated Tests)
 
 Recommended packs:
+
 - A: Gold answerable (grounded Q&A)
 - B: Unanswerable / abstain
 - C: Ambiguity / clarify

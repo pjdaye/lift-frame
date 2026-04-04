@@ -6,6 +6,7 @@ This repository maintains two artifacts:
 - **FRAME** (the correctness lens): bounded correctness (invariants, envelopes, liveness, evidence)
 
 ## Decision making
+
 - Small editorial changes: direct commit to `main`
 - Substantive taxonomy changes (new layers/axes, renames, breaking tags):
   - Open an issue describing the change + rationale
@@ -14,6 +15,7 @@ This repository maintains two artifacts:
   - If breaking: bump major version
 
 ## Releases
+
 - Tag releases using SemVer: `vMAJOR.MINOR.PATCH`
 - Each release should update:
   - `CHANGELOG.md`
@@ -21,4 +23,5 @@ This repository maintains two artifacts:
   - `docs/releases/` snapshot (optional but recommended)
 
 ## Contact
+
 - Maintainer: <YOUR NAME / HANDLE>
