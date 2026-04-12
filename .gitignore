@@ -3,6 +3,10 @@
 __pycache__/
 *.pyc
 
+# Node
+node_modules/
+dist/
+
 # MkDocs
 site/
 
