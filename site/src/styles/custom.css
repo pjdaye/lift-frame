@@ -1,0 +1,13 @@
+:root {
+  --sl-color-text-accent: #22d3ee;
+  --sl-color-accent: #22d3ee;
+  --sl-color-link: #22d3ee;
+  --sl-max-width: 1400px;
+  --sl-content-width: 1080px;
+  --sl-sidebar-width: 220px;
+  --sl-content-gap: 2rem;
+}
+
+
+/* Optional copper utility */
+.lift-risk { color: #c47c3c; font-weight: 600; }
