@@ -1,5 +1,7 @@
 ---
 title: LIFT
+sidebar:
+    order: 0
 ---
 
 **LIFT** is a lifecycle-anchored fault & threat taxonomy for AI-enabled systems.

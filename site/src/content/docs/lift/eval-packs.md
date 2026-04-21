@@ -1,5 +1,7 @@
 ---
 title: Evaluation Packs
+sidebar:
+    order: 5
 ---
 
 Recommended packs:
