@@ -1,5 +1,7 @@
 ---
 title: Scenarios
+sidebar:
+    order: 3
 ---
 
 Real-world failures are often multi-step chains that span layers:
