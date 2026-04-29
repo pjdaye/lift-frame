@@ -1,38 +1,53 @@
 # LIFT + FRAME
 
-**LIFT** is a lifecycle-anchored fault and threat taxonomy for AI-enabled systems.
-**FRAME** is the correctness lens that motivates it: **bounded correctness** (invariants, envelopes, liveness, and evidence).
+LIFT + FRAME is a taxonomy and documentation project for AI-enabled systems.
 
-This repository is designed to:
+- **LIFT**: a lifecycle-anchored fault and threat taxonomy.
+- **FRAME**: the correctness lens behind the taxonomy, centered on bounded correctness (invariants, envelopes, liveness, and evidence).
 
-- Host the canonical taxonomy in a diffable format (`taxonomy/lift.yaml`)
-- Publish a readable documentation site with Astro + Starlight (`site/src/content/docs/`)
-- Support semantic versioning and release snapshots
+## Repository purpose
+
+This repository is the canonical source for:
+
+- The taxonomy data model and content in YAML.
+- Human-readable documentation and examples.
+- Schema validation and CI checks.
+- Versioned releases and changelog history.
 
 ## Repository layout
 
-- `taxonomy/`: canonical taxonomy (`lift.yaml`) and JSON Schema (`schemas/lift.schema.json`)
-- `tools/`: taxonomy validation script and Python requirements
-- `site/`: Astro + Starlight documentation site (published to GitHub Pages)
+- `taxonomy/lift.yaml`: canonical LIFT taxonomy.
+- `taxonomy/schemas/lift.schema.json`: JSON Schema for taxonomy validation.
+- `tools/validate_taxonomy.py`: local and CI taxonomy validator.
+- `tools/requirements.txt`: Python dependencies for validation tooling.
+- `site/`: Astro + Starlight documentation site.
+- `site/src/content/docs/`: docs content (FRAME, LIFT, examples, references).
 
-## Licensing (dual)
+## Prerequisites
 
-- Documentation and taxonomy content (Markdown in `site/src/content/docs/`, diagrams, and taxonomy text) are licensed under **CC BY 4.0**. See `site/src/content/docs/LICENSE`.
-- Code (scripts, workflows) is licensed under **Apache-2.0**. See `LICENSE`.
+- Python 3.12 (matches CI) or a compatible Python 3.x runtime.
+- Node.js (for the docs site in `site/`).
 
 ## Quick start
 
-### 1) Validate taxonomy
+### 1) Validate the taxonomy
+
+From the repository root:
 
 ```bash
 python -m venv .venv
-# Windows: .venv\Scripts\activate
-source .venv/bin/activate
+# Windows (PowerShell): .venv\Scripts\Activate.ps1
+# Linux/macOS: source .venv/bin/activate
+python -m pip install --upgrade pip
 pip install -r tools/requirements.txt
 python tools/validate_taxonomy.py
 ```
 
-### 2) Run docs site locally
+Expected output:
+
+- `LIFT taxonomy validation passed.`
+
+### 2) Run docs locally
 
 ```bash
 cd site
@@ -40,29 +55,35 @@ npm install
 npm run dev
 ```
 
-Open: <http://localhost:4321/>
+Local URL: <http://localhost:4321/lift-frame/> (base path configured in `site/astro.config.mjs`).
 
-## GitHub Pages deployment
-
-The repository deploys the Starlight site to GitHub Pages using GitHub Actions.
-
-1) In GitHub, go to **Settings -> Pages**
-2) Set **Source** to **GitHub Actions**
-3) Push to `main` (or run the deploy workflow manually)
-
-The deploy workflow builds the site from `site/`.
-
-## CI validation
-
-CI installs dependencies from `tools/requirements.txt` and runs:
+## Build docs for production
 
 ```bash
-python tools/validate_taxonomy.py
+cd site
+npm run build
+npm run preview
 ```
 
-## Semantic versioning
+## CI and deployment
 
-- Development: `v0.x.y`
-- Public releases: `v1.0.0`, `v1.1.0`, etc.
+- **Validation CI** (`.github/workflows/ci.yml`): runs on push to `main` and on pull requests; installs `tools/requirements.txt` and executes `python tools/validate_taxonomy.py`.
+- **GitHub Pages deploy** (`.github/workflows/deploy.yml`): builds `site/` with Astro and deploys to Pages on push to `main` or manual dispatch.
 
-See `CHANGELOG.md`.
+To enable Pages deployment in a fork/repo:
+
+1. Go to GitHub Settings -> Pages.
+2. Set Source to GitHub Actions.
+
+## Versioning
+
+- Taxonomy version is stored in `taxonomy/lift.yaml`.
+- Repository release history is tracked in `CHANGELOG.md`.
+- Semantic versioning is used for releases.
+
+## Licensing
+
+Dual licensing is used:
+
+- Documentation and taxonomy content are licensed under CC BY 4.0. See `site/src/content/docs/LICENSE`.
+- Code (scripts, workflows, tooling) is licensed under Apache-2.0. See `LICENSE`.
