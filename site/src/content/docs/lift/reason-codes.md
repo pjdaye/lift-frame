@@ -1,4 +1,8 @@
-# Reason codes (starter)
+---
+title: Reason Codes
+sidebar:
+    order: 6
+---
 
 Reason codes turn subjective failures into operational signals.
 

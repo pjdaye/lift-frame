@@ -1,4 +1,6 @@
-# LIFT + FRAME
+---
+title: LIFT + FRAME
+---
 
 Welcome! This site hosts two complementary artifacts:
 

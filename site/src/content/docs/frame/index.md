@@ -1,4 +1,6 @@
-# FRAME
+---
+title: FRAME
+---
 
 FRAME is a practical lens for defining correctness in non-deterministic systems.
 

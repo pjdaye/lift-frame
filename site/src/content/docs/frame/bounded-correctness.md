@@ -1,4 +1,6 @@
-# Bounded correctness
+---
+title: Bounded Correctness
+---
 
 A useful unifying frame is **bounded correctness**:
 

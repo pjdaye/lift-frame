@@ -24,4 +24,4 @@ This repository maintains two artifacts:
 
 ## Contact
 
-- Maintainer: <YOUR NAME / HANDLE>
+- Maintainer: Philip Daye / pjdaye

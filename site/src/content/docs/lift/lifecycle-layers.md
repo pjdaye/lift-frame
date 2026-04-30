@@ -1,4 +1,8 @@
-# Lifecycle layers (Axis 1)
+---
+title: Lifecycle Layers
+sidebar:
+    order: 1
+---
 
 ## L0 — Policy & instruction boundary
 

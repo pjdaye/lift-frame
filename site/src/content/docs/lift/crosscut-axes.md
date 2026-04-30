@@ -1,4 +1,8 @@
-# Cross-cutting axes (Axis 2–4)
+---
+title: Cross-Cutting Axes
+sidebar:
+    order: 2
+---
 
 ## Axis 2 — Attack / failure pattern classes
 

@@ -1,4 +1,8 @@
-# Evaluation packs (Canary + Generated Tests)
+---
+title: Evaluation Packs
+sidebar:
+    order: 5
+---
 
 Recommended packs:
 

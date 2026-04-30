@@ -1,4 +1,6 @@
-# Oracle-first
+---
+title: Oracle-First
+---
 
 **Oracle-first** is the operational principle that makes bounded correctness testable at scale:
 

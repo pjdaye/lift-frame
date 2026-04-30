@@ -1,4 +1,8 @@
-# Tagging recipe
+---
+title: Tagging Recipe
+sidebar:
+    order: 4
+---
 
 For any risk/test case, record:
 
