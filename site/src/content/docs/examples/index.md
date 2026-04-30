@@ -11,7 +11,7 @@ This section provides **worked examples** you can use to teach LIFT + FRAME, and
 
 ## Current examples
 
-- [Journalism & Epistemic Integrity — AI-Fabricated Quotes](./journalism-quote-integrity/)
-- [Legal Filings — AI-Fabricated Case Citations](./legal-citation-integrity/)
 - [Customer Support — Anthropomorphic Persona Drift](./customer-support-persona-drift/)
 - [High-Stakes Screening — AI Used as Decision Authority](./high-stakes-screening-governance/)
+- [Journalism & Epistemic Integrity — AI-Fabricated Quotes](./journalism-quote-integrity/)
+- [Legal Filings — AI-Fabricated Case Citations](./legal-citation-integrity/)
