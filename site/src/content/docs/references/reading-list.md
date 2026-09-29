@@ -125,6 +125,19 @@ This page curates the most useful external references for **LIFT + FRAME**.
 
 ---
 
+## Practitioner evals methodology (agent-executed)
+
+Independent, applied-practice grounding for the Method's oracle-first stance and its error-discovery branch — arrived at from the AI-evals-practitioner community rather than the security or formal-methods traditions the rest of this page draws from.
+
+- **[Evals Skills for Coding Agents (Hamel Husain & Shreya Shankar, 2026)](https://hamel.dev/blog/posts/evals-skills/)** — a set of agent-executable skills for product AI evals, built around a warning against generic off-the-shelf metrics and fully-automated evals run before anyone has looked at the data. Informs: the Method's shipped-vs-prospective branch point, and independently corroborates oracle-first from outside the taxonomy's own lineage.
+  - Companion repo: <https://github.com/ai-evals-course/evals-skills>
+
+- **[error-discovery skill (SKILL.md)](https://github.com/ai-evals-course/evals-skills/blob/main/skills/error-discovery/SKILL.md)** — a concrete, ready-to-run methodology for inductive failure-mode discovery from real traces: build a review interface, sample for diversity (cluster representatives plus random), let a human annotate freely without a preset category list. Informs: the Method's "Before You Start" branch for already-shipped features, and the Tagging Recipe as the bridge from emergent findings back into the general taxonomy. Also a useful reference design for any future agent-executed skill built around this site's own /GOAL loop — phased execution, on-disk state, explicit progress narration, and a defined fallback for non-interactive runs.
+
+- **validate-evaluator skill** (same repo) — calibrates LLM judges against human labels using data splits, true-positive/true-negative rate, and bias correction. Informs: `/frame/oracle-first/` and the Method's judge-qualification section (§7.4) — TPR/TNR separates "misses real failures" from "over-flags good output" in a way a single aggregate agreement score can hide.
+
+---
+
 ## Drift / versioning / operational reliability
 
 ### Governance anchors
@@ -169,4 +182,4 @@ This page curates the most useful external references for **LIFT + FRAME**.
   - a 1–2 sentence “why it matters for LIFT/FRAME”
   - the LIFT layer(s) it most informs (e.g., L0/L3 for prompt injection; L1 for RAG error taxonomies)
 
-> Last updated: 29 April 2026
+> Last updated: 24 August 2026
