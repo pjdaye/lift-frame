@@ -197,6 +197,6 @@ Four fully worked, independently converged test plans demonstrate every section 
 ## See Also
 
 - [Examples](/lift-frame/examples/) — retrospective analyses of real, cited incidents (distinct from the Worked Examples above)
-- [Reading List](/lift-frame/references/reading-list/) — full citation list for the papers referenced throughout this page *(confirm exact URL slug)*
+- [Reading List](/lift-frame/references/reading-list/) — full citation list for the papers referenced throughout this page
 
 > Status: v1.0, synthesized from four independently converged, cross-model-scored validation plans. Numeric thresholds marked provisional pending a cross-generator confirmation pass.
