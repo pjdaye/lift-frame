@@ -1,0 +1,75 @@
+# Maps each file bundled inside skills/*/reference (or /examples) to the canonical
+# source it must stay byte-identical to. Checked by tools/check_skill_sync.py.
+#
+# Add a new pair here whenever a new file gets bundled into a skill. A canonical
+# file with no bundled copies is fine (nothing depends on it yet); a bundled file
+# with no manifest entry is NOT checked and will drift silently — don't forget it.
+#
+# rubric.md (skills/lift-frame-score-plan/reference/rubric.md) has no canonical
+# entry here on purpose: it has no public counterpart in this repo (see the
+# public/internal split in the PRD addendum). Its source of truth is external
+# to this repository and cannot be checked automatically here.
+
+pairs:
+  - canonical: taxonomy/lift.yaml
+    bundled:
+      - skills/lift-frame-write-plan/reference/taxonomy.yaml
+      - skills/lift-frame-score-plan/reference/taxonomy.yaml
+
+  - canonical: site/src/content/docs/lift/lifecycle-layers.md
+    bundled:
+      - skills/lift-frame-write-plan/reference/lifecycle-layers.md
+
+  - canonical: site/src/content/docs/lift/crosscut-axes.md
+    bundled:
+      - skills/lift-frame-write-plan/reference/crosscut-axes.md
+      - skills/lift-frame-score-plan/reference/crosscut-axes.md
+
+  - canonical: site/src/content/docs/lift/risk-scoring.md
+    bundled:
+      - skills/lift-frame-write-plan/reference/risk-scoring.md
+      - skills/lift-frame-score-plan/reference/risk-scoring.md
+
+  - canonical: site/src/content/docs/lift/eval-packs.md
+    bundled:
+      - skills/lift-frame-write-plan/reference/eval-packs.md
+
+  - canonical: site/src/content/docs/lift/tagging-recipe.md
+    bundled:
+      - skills/lift-frame-write-plan/reference/tagging-recipe.md
+
+  - canonical: site/src/content/docs/lift/reason-codes.md
+    bundled:
+      - skills/lift-frame-write-plan/reference/reason-codes.md
+
+  - canonical: site/src/content/docs/lift/scenarios.md
+    bundled:
+      - skills/lift-frame-write-plan/reference/scenarios.md
+
+  - canonical: site/src/content/docs/frame/bounded-correctness.md
+    bundled:
+      - skills/lift-frame-write-plan/reference/bounded-correctness.md
+
+  - canonical: site/src/content/docs/frame/oracle-first.md
+    bundled:
+      - skills/lift-frame-write-plan/reference/oracle-first.md
+
+  - canonical: site/src/content/docs/method/index.md
+    bundled:
+      - skills/lift-frame-write-plan/reference/method.md
+
+  - canonical: site/src/content/docs/method/examples/retrieval-policy-assistant.md
+    bundled:
+      - skills/lift-frame-write-plan/examples/retrieval-policy-assistant.md
+
+  - canonical: site/src/content/docs/method/examples/tool-using-assistant.md
+    bundled:
+      - skills/lift-frame-write-plan/examples/tool-using-assistant.md
+
+  - canonical: site/src/content/docs/method/examples/vulnerable-population-upgrade.md
+    bundled:
+      - skills/lift-frame-write-plan/examples/vulnerable-population-upgrade.md
+
+  - canonical: site/src/content/docs/method/examples/agentic-platform.md
+    bundled:
+      - skills/lift-frame-write-plan/examples/agentic-platform.md

@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LIFT + FRAME Test Plan Score Output",
+  "type": "object",
+  "required": [
+    "rubric_version",
+    "feature",
+    "mode",
+    "layer_applicability",
+    "dimensions",
+    "gates_triggered",
+    "weighted_total",
+    "verdict",
+    "top_gaps"
+  ],
+  "properties": {
+    "rubric_version": { "type": "string" },
+    "feature": { "type": "string" },
+    "mode": { "type": "string", "enum": ["standalone", "loop"] },
+    "architectural_assumptions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "layer_applicability": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["applicable", "rationale"],
+        "properties": {
+          "applicable": { "type": "boolean" },
+          "rationale": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "dimensions": {
+      "type": "object",
+      "required": [
+        "D1_frame_contract",
+        "D2_oracle_first_judges",
+        "D3_layer_coverage",
+        "D4_crosscut_axes",
+        "D5_compositional",
+        "D6_eval_packs",
+        "D7_operational",
+        "D8_traceability",
+        "D9_risk_register"
+      ],
+      "additionalProperties": {
+        "type": "object",
+        "required": ["score", "evidence", "notes"],
+        "properties": {
+          "score": { "type": "number", "minimum": 0, "maximum": 4 },
+          "evidence": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1,
+            "description": "Required when score >= 2 per the anti-gaming rule. A score >=2 with an empty evidence array should be treated as invalid."
+          },
+          "notes": { "type": "string" },
+          "per_layer": { "type": "object" },
+          "packs_accounted": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "gates_triggered": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "s1_invariant_gate",
+          "judge_without_oracle_gate",
+          "tessa_gate",
+          "coverage_matrix_gate"
+        ]
+      }
+    },
+    "prompt_as_guardrail_flags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "hallucinated_coverage_flags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "weighted_total": { "type": "number", "minimum": 0, "maximum": 100 },
+    "verdict": {
+      "type": "string",
+      "enum": ["release_ready", "conditionally_ready", "not_ready", "does_not_engage_framework"]
+    },
+    "catch_rate": {
+      "type": "object",
+      "properties": {
+        "applicable": { "type": "boolean" },
+        "caught": { "type": "integer", "minimum": 0 },
+        "total": { "type": "integer", "minimum": 0 },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["annex_item_id", "caught"],
+            "properties": {
+              "annex_item_id": { "type": "string" },
+              "caught": { "type": "boolean" },
+              "plan_ref": { "type": ["string", "null"] }
+            }
+          }
+        }
+      }
+    },
+    "goal_exit_met": { "type": "boolean" },
+    "top_gaps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["rank", "gap", "layer_or_dimension", "recommended_action"],
+        "properties": {
+          "rank": { "type": "integer", "minimum": 1 },
+          "gap": { "type": "string" },
+          "layer_or_dimension": { "type": "string" },
+          "tier": { "type": "string", "enum": ["T1", "T2", "T3"] },
+          "recommended_action": { "type": "string" }
+        }
+      }
+    }
+  }
+}

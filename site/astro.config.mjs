@@ -13,11 +13,13 @@ export default defineConfig({
 			disable404Route: true,
 			sidebar: [
 				{ label: 'Home', link: '/' },
-				{ label: 'FRAME', autogenerate: { directory: 'frame' } },
-				{ label: 'LIFT', autogenerate: { directory: 'lift' } },
-				{ label: 'Examples', autogenerate: { directory: 'examples' } },
-				{ label: 'References', autogenerate: { directory: 'references' } },
+				{ label: 'FRAME', items: [{autogenerate: { directory: 'frame' }}] },
+				{ label: 'LIFT', items: [{autogenerate: { directory: 'lift' }}] },
+				{ label: 'Method', items: [{autogenerate: { directory: 'method' }}] },
+				{ label: 'Examples', items: [{autogenerate: { directory: 'examples' }}] },
+				{ label: 'References', items: [{autogenerate: { directory: 'references' }}] },
 			],
+			social: [{ icon: 'github', label: 'GitHub', href: "https://github.com/pjdaye/lift-frame" }],
 		}),
 	],
 });

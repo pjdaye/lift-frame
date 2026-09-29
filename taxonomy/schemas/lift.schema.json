@@ -67,6 +67,12 @@
           "items": {
             "type": "string"
           }
+        },
+        "harm_domains": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     }
